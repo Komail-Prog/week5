@@ -12,6 +12,8 @@ git pull      # pull the latest changes from remote
 git stash pop # re-apply your local changes
 ```
 
+Or, do `git clone <repo>` elsewhere.
+
 ## AI Assistance:
 
 - You may enable the in-editor **Co-pilot** for AI-assisted auto-complete. Remember however, that you are the **Pilot**. This means, you are responsible for the code.
