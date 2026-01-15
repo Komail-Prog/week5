@@ -162,7 +162,7 @@
 - [DataCollatorWithPadding](https://huggingface.co/docs/transformers/en/main_classes/data_collator#transformers.DataCollatorWithPadding)
 
 #### Datasets
-- [Food.com Recipes and Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions)
+- [Food.com Recipes and Interactions](https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions) (Note: this is actually the original, but the lab assumes some pre-processed subset of it. Currently shared via [this link instead](https://drive.google.com/file/d/1NZjBHPzTrLahTaWcZ6GUH1GEYCTAODOw/view?usp=drive_link))
 
 
 ## Module 3: Advanced NLP Applications
