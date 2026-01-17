@@ -28,9 +28,8 @@
 # ## Prerequisites
 #
 # Before starting, make sure you have:
-# - Completed the setup instructions in `SETUP.md`
-# - Obtained a Gemini API key from [AI Studio](https://aistudio.google.com/app/api-keys)
-# - Installed the required dependencies (see `SETUP.md`)
+# - Obtained a Gemini API key from [AI Studio](https://aistudio.google.com/app/api-keys). Follow instructions [here](https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Authentication.ipynb)
+# - Installed the required dependencies listed in `pyproject.toml` via `uv sync`
 
 # %% [markdown]
 # ## Part 1: Getting Started with the Gemini API
@@ -61,19 +60,15 @@ genai.models.Models.generate_content = retry.Retry(
 #
 # The Gemini API uses a `Client` object to make requests.
 # The client handles authentication and lets you control which backend to use (Gemini API or Vertex AI).
-#
-# **Note:** Make sure you have set up your API key according to the instructions in `SETUP.md`.
 
 # %%
-# Initialize the client with your API key
-# Replace with your actual API key or use environment variable
-import os
+import google.colab.userdata
 
-api_key = os.getenv("GOOGLE_API_KEY")
-if not api_key:
-    raise ValueError("Please set GOOGLE_API_KEY environment variable. See SETUP.md for instructions.")
-
+api_key = google.colab.userdata.get('GEMINI_API_KEY')
 client = genai.Client(api_key=api_key)
+
+# %% [markdown]
+# **Note:** Use the below code if you decide to run your code locally. We highly recommend using Google Colab
 
 # %% [markdown]
 # ### Run Your First Prompt
@@ -578,3 +573,5 @@ Markdown(response.text)
 # - [Gemini API Prompting Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
 # - [Gemini API Models Overview](https://ai.google.dev/gemini-api/docs/models/gemini)
 # - [Gemini API Cookbook](https://github.com/google-gemini/cookbook)
+
+
